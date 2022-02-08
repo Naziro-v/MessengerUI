@@ -31,7 +31,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun gettAllChats(): ArrayList<Chat> {
         val stories:ArrayList<Room> = ArrayList()
-        stories.add(Room(R.drawable.img_2,"Nazirov ELmurod"))
+        stories.add(Room(R.drawable.ic_baseline_video_call_24,"Create Room"))
         stories.add(Room(R.drawable.img_3,"Nazirov ELmurod"))
         stories.add(Room(R.drawable.img_4,"Nazirov ELmurod"))
         stories.add(Room(R.drawable.img_5,"Nazirov ELmurod"))

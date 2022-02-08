@@ -29,6 +29,8 @@
                 android:gravity="bottom|right">
 
                 <LinearLayout
+                    android:orientation="vertical"
+                    android:id="@+id/circle_green"
                     android:layout_width="15dp"
                     android:layout_height="15dp"
                     android:layout_marginRight="2dp"

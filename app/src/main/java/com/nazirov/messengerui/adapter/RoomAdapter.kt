@@ -4,6 +4,7 @@ import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.imageview.ShapeableImageView
@@ -23,9 +24,14 @@ class RoomAdapter(var context: Context, var items: ArrayList<Room>) :
         if (holder is RoomViewHolder) {
             var iv_profile = holder.iv_profile
             var tv_fullname = holder.tv_fullname
+            var isonline = holder.linearLayout
 
             iv_profile.setImageResource(room.profile)
             tv_fullname.text = room.fullname
+
+            if (room.fullname=="Create Room") {
+                isonline.visibility = View.GONE
+            }
         }
     }
 
@@ -36,5 +42,7 @@ class RoomAdapter(var context: Context, var items: ArrayList<Room>) :
     class RoomViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         var iv_profile: ShapeableImageView = view.findViewById(R.id.iv_profile)
         var tv_fullname: TextView = view.findViewById(R.id.tv_fullname)
+
+        var linearLayout :LinearLayout = view.findViewById(R.id.circle_green)
     }
 }
